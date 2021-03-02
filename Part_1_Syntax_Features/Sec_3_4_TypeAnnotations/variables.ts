@@ -47,9 +47,9 @@ let bools: boolean[] = [true, false, true, false];
 console.log("\nbools:", bools, " | Array type? ->", bools instanceof Array);
 
 // classes
-class Car {}
-let car: Car = new Car();
-console.log("\ncar:", car, " | Car type? ->", car instanceof Car);
+class Car_0 {}
+let car_0: Car_0 = new Car_0();
+console.log("\ncar:", car_0, " | Car type? ->", car_0 instanceof Car_0);
 
 // object literal
 let point: { x: number; y: number } = {
