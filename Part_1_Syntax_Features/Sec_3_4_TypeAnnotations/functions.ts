@@ -18,7 +18,7 @@ console.log("\nadd() ->", add(7, 3));
   that function is meant to return nothing/undefined (void)
 
 - Sometimes that may yield unexpected results, so type annotation for
-  a function's output should be specified, so logic errors can be avoided
+  a function's output should be specified, consequently logic errors can be avoided
 */
 const subtract = (a: number, b: number) => {
 	a - b;
