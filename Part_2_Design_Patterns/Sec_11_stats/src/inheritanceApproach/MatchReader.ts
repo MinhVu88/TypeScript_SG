@@ -1,0 +1,32 @@
+import {CsvFileReader} from './CsvFileReader';
+import {dateStringToDateObject} from '../utils';
+import {MatchResultsEnum} from '../MatchResults';
+
+/* A tuple data structure representing a single row of football.csv. For example:
+
+   [
+    '10/08/2018' (string -> Date, using dateStringToDateObject() in utils.ts), 
+    'Man United' (string), 
+    'Leicester' (string), 
+    '2' (string -> number, using parseInt()), 
+    '1' (string -> number, using parseInt()),
+    'H' (string -> MatchResultsEnum, using type assertion in MatchReader.ts), 
+    'A Marriner' (string)
+   ]
+*/
+type MatchData = [Date, string, string, number, number, MatchResultsEnum, string];
+
+export class MatchReader extends CsvFileReader<MatchData> {
+  mapRow(rowOfMatch: string[]): MatchData {
+    return [
+      dateStringToDateObject(rowOfMatch[0]),
+      rowOfMatch[1],
+      rowOfMatch[2],
+      parseInt(rowOfMatch[3]),
+      parseInt(rowOfMatch[4]),
+      // type assertion
+      rowOfMatch[5] as MatchResultsEnum,
+      rowOfMatch[6]
+    ];
+  }
+};

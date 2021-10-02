@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "json:server": "json-server --watch api/db.json"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.4"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "json-server": "^0.16.3"
+  }
+}

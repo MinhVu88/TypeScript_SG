@@ -1,0 +1,17 @@
+{
+  "name": "Part_1_Syntax_Features",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2"
+  }
+}
